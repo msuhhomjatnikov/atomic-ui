@@ -1,0 +1,55 @@
+@import "../../abstracts/Typography/Typography.sass"
+
+.banner
+  background: #E5EEFF
+  color: #435CCD
+  display: flex
+  align-items: center
+  border-radius: 8px
+  padding: 16px
+  @include body-s
+
+  &.-inline
+    padding: 8px
+
+    .banner-icon
+      margin-right: 10px
+
+  .banner-icon
+    min-width: 16px
+    margin-right: 16px
+
+    &.icon-top
+      align-self: flex-start
+
+  .close-icon-wrapper
+    margin-left: auto
+    align-self: baseline
+    display: flex
+    .close-icon
+      margin-left: 10px
+      align-self: flex-start
+      cursor: pointer
+
+  &.-centered
+    justify-content: center
+
+  &.-gray
+    background: var(--gray-120)
+    color: var(--gray-450)
+
+  &.-error
+    background-color: var(--red-120)
+    color: var(--red-450)
+
+  &.-warning
+    background-color: var(--orange-120)
+    color: var(--orange-450)
+
+  &.-success
+    background-color: var(--green-120)
+    color: var(--green-450)
+
+  &.-info
+    background-color: var(--blue-120)
+    color: var(--blue-450)

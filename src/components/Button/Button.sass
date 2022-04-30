@@ -1,0 +1,156 @@
+@import "../../abstracts/Typography/Typography.sass"
+@import "../../abstracts/Transition/Transition.sass"
+@import "../../abstracts/Color/Color.sass"
+
+.btn
+  border: solid 1px transparent
+  display: inline-flex
+  align-items: center
+  border-radius: 8px
+  box-sizing: border-box
+  cursor: pointer
+  @include color-transitions
+  &.loading, &.disabled, &:disabled
+    cursor: default
+  &-content
+    display: flex
+    flex-direction: row
+    column-gap: 0.5rem
+    &.icon-RIGHT
+      flex-direction: row-reverse
+    .btn--xs &
+      column-gap: 0.25rem
+
+.btn--primary
+  color: var(--white)
+  background-color: var(--orange-700)
+  text-decoration: none
+  border: none
+  &:hover, &.hover
+    color: var(--white)
+    background-color: var(--orange-550)
+    &:not(:focus):not(.focus)
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.02)
+  &:disabled, &.disabled
+    background-color: var(--orange-150)
+    box-shadow: none
+    border-color: transparent
+  &:focus, &.focus
+    border-color: var(--orange-700)
+
+.btn--outline-primary
+  background-color: var(--white)
+  border-color: var(--gray-150)
+  color: var(--gray-700)
+  &:hover, &.hover
+    border-color: var(--gray-200)
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.03)
+    color: var(--gray-700)
+  &:disabled, &.disabled
+    box-shadow: none
+    color: var(--gray-200)
+    border-color: var(--gray-120)
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active
+    &:focus,
+    &.focus
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08)
+  &:focus,
+  &.focus
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08)
+
+.btn--link
+  color: var(--orange-700)
+  text-decoration: none
+  border: none
+  &:hover, &.hover
+    color: var(--orange-700)
+    background: var(--gray-120)
+    text-decoration: none
+  &:focus, &.focus
+    border: none
+    text-decoration: none
+  &:disabled, &.disabled
+    color: var(--gray-300)
+    background: none
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active
+    text-decoration: none
+    box-shadow: 0px 0px 0px 3px var(--orange-150)
+  &.-compact
+    padding: 0
+    border: none
+
+.btn--delete
+  color: var(--white)
+  background-color: var(--red-450)
+  text-decoration: none
+  border: none
+  &:hover, &.hover
+    color: var(--white)
+    background-color: var(--red-300)
+    text-decoration: none
+  &:focus, &.focus
+    border: none
+    text-decoration: none
+    background-color: var(--red-300)
+    box-shadow: 0px 0px 0px 3px var(--red-450)
+  &:disabled, &.disabled
+    color: var(--gray-300)
+    background-color: var(--gray-120)
+    border: none
+    box-shadow: none
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active
+    color: var(--white)
+    text-decoration: none
+
+.btn--icon
+  height: auto
+  &.btn--xs
+    padding: 6px
+  &.btn--sm
+    padding: 4px 10px
+  &.btn--md
+    padding: 8px 12px
+  &.btn--lg
+    padding: 10px 14px
+  svg
+    display: inline-block
+  div
+    display: flex
+    align-items: center
+
+.btn--xs, .btn--group-xs > .btn
+  @include body-s-bold
+  border-radius: 6px
+  padding: 4px 8px
+  height: 24px
+
+.btn--sm, .btn--group-sm > .btn
+  @include body-m-bold
+  padding: 4px 12px
+  height: 32px
+
+.btn--md, .btn--group-md > .btn
+  @include body-m-bold
+  padding: 8px 16px
+  height: 40px
+
+.btn--lg, .btn--group-lg > .btn
+  @include body-l-bold
+  padding: 12px 24px
+  height: 48px
+
+.buttons
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+
+  &.-horizontal
+    flex-direction: row
+    height: fit-content
+
+  &.-vertical
+    flex-direction: column
+    width: fit-content

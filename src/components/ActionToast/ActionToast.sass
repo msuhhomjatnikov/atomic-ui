@@ -1,0 +1,47 @@
+@import "../../abstracts/Typography/Typography.sass"
+@import "../../abstracts/Transition/Transition.sass"
+
+$notification-button-hover: rgba(255, 255, 255, 0.1)
+
+.moss-action-toast
+  position: fixed
+  bottom: 24px
+  left: 24px
+  z-index: 99999999
+  min-width: 610px
+
+  .container-box
+    display: flex
+    align-items: center
+    background-color: var(--black)
+    box-shadow: 0px 4px 32px -4px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(85, 85, 85, 0.1)
+    border-radius: 8px
+    padding: 0 24px
+    height: 68px
+
+  .message
+    color: var(--white)
+    @include body-m
+
+  .action
+    color: var(--blue-200)
+    cursor: pointer
+    padding: 10px
+    border-radius: 8px
+    @include color-transitions
+
+  .action:hover
+    background-color: $notification-button-hover
+
+  .actions-wrapper
+    display: flex
+    margin-left: auto
+    padding-left: 22px
+    column-gap: 14px
+
+  .close-icon-wrapper
+    display: flex
+    cursor: pointer
+
+  .close-icon
+    margin: 10px 4px 10px 0px

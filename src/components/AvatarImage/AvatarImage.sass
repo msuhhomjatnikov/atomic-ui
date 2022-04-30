@@ -1,0 +1,105 @@
+@import "../../abstracts/Typography/Typography.sass"
+
+$xs-width-height: 24px
+$s-width-height: 32px
+$m-width-height: 40px
+$l-width-height: 48px
+$xl-width-height: 56px
+
+$xs-icon-width-height: 12px
+$s-icon-width-height: 14px
+$m-icon-width-height: 16px
+$l-icon-width-height: 18px
+$xl-icon-width-height: 20px
+
+.avatar-image
+
+  &-container
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    &.-xs
+      height: $xs-width-height
+      width: $xs-width-height
+    &.-s
+      height: $s-width-height
+      width: $s-width-height
+    &.-m
+      height: $m-width-height
+      width: $m-width-height
+    &.-l
+      height: $l-width-height
+      width: $l-width-height
+    &.-xl
+      height: $xl-width-height
+      width: $xl-width-height
+    &.-default
+      background-color: var(--gray-200)
+    &.-blue
+      background-color: var(--blue-300)
+    &.-purple
+      background-color: var(--purple-300)
+    &.-pink
+      background-color: var(--pink-300)
+    &.-red
+      background-color: var(--red-300)
+    &.-orange
+      background-color: var(--orange-300)
+    &.-yellow
+      background-color: var(--yellow-300)
+    &.-green
+      background-color: var(--green-300)
+    &.-moss
+      background-color: var(--ui-moss-300)
+    &.-gray
+      background-color: var(--gray-300)
+
+  &-text
+    color: white
+    &.-xs
+      @include body-s
+    &.-s
+      @include body-m
+    &.-m
+      @include body-l
+    &.-l
+      @include body-xl
+    &.-xl
+      @include heading-5
+
+  &-img
+    object-fit: cover
+    border-radius: 50%
+    &.-xs
+      height: $xs-width-height
+      width: $xs-width-height
+    &.-s
+      height: $s-width-height
+      width: $s-width-height
+    &.-m
+      height: $m-width-height
+      width: $m-width-height
+    &.-l
+      height: $l-width-height
+      width: $l-width-height
+    &.-xl
+      height: $xl-width-height
+      width: $xl-width-height
+
+  &-icon
+    &.-xs
+      height: $xs-icon-width-height
+      width: $xs-icon-width-height
+    &.-s
+      height: $s-icon-width-height
+      width: $s-icon-width-height
+    &.-m
+      height: $m-icon-width-height
+      width: $m-icon-width-height
+    &.-l
+      height: $l-icon-width-height
+      width: $l-icon-width-height
+    &.-xl
+      height: $xl-icon-width-height
+      width: $xl-icon-width-height

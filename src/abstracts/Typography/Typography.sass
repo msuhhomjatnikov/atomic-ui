@@ -1,0 +1,93 @@
+@mixin heading-1
+  font-weight: 700
+  font-size: 56px
+  line-height: 64px
+  letter-spacing: -0.02em
+  font-family: Courier New, serif
+
+@mixin heading-2
+  font-weight: 700
+  font-size: 40px
+  line-height: 48px
+  letter-spacing: -0.01em
+  font-family: Courier New, serif
+
+@mixin heading-3
+  font-weight: 700
+  font-size: 32px
+  line-height: 40px
+  letter-spacing: -0.01em
+  font-family: Courier New, serif
+
+@mixin heading-4
+  font-weight: 700
+  font-size: 24px
+  line-height: 32px
+  letter-spacing: -0.01em
+  font-family: Courier New, serif
+
+@mixin heading-5
+  font-weight: 500
+  font-size: 20px
+  line-height: 24px
+  letter-spacing: -0.02em
+  font-family: Courier New, serif
+
+@mixin body-xl
+  font-weight: 400
+  font-size: 18px
+  line-height: 24px
+  letter-spacing: 0
+  font-family: Courier New, serif
+
+@mixin body-l
+  font-weight: 400
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: 0
+  font-family: Courier New, serif
+
+@mixin body-m
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.01em
+  font-family: Courier New, serif
+
+@mixin body-s
+  font-weight: 400
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.02em
+  font-family: Courier New, serif
+
+@mixin body-xs-caps
+  font-weight: 500
+  font-size: 10px
+  line-height: 16px
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  font-family: Courier New, serif
+
+@mixin body-bold
+  font-weight: 500
+
+@mixin body-xl-bold
+  @include body-xl
+  @include body-bold
+  letter-spacing: -0.01em
+
+@mixin body-l-bold
+  @include body-l
+  @include body-bold
+  letter-spacing: -0.01em
+
+@mixin body-m-bold
+  @include body-m
+  @include body-bold
+  letter-spacing: 0
+
+@mixin body-s-bold
+  @include body-s
+  @include body-bold
+  letter-spacing: -0.01em
