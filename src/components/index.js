@@ -3,7 +3,7 @@ import '../abstracts/Color/Color.sass';
 export { default as LoadingSpinner } from './LoadingSpinner';
 export { default as Input } from './Input';
 export { default as Checkbox, CHECKBOX_SIZE } from './Checkbox';
-export { default as Banner, BANNER_TYPE } from './Banner';
+export { default as Banner } from './Banner';
 export {
     default as Button,
     BUTTON_ICON,

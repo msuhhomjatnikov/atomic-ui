@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react';
 import { string } from 'prop-types';
 
-import './LoadingSpinner.css';
+import './LoadingSpinner.sass';
 
 const LoadingSpinner = memo(function LoadingSpinner({
   size = '18px',
