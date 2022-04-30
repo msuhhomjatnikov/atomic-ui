@@ -1,0 +1,72 @@
+@import "../../abstracts/Typography/Typography.sass"
+@import "../../abstracts/Transition/Transition.sass"
+
+.side-nav
+  @include color-transitions
+  border-left: 1px solid var(--gray-150)
+  display: flex
+  flex-direction: column
+
+  &:hover
+    .side-nav__button
+      &--active
+        border-color: transparent
+      &--complete:hover
+        border-color: var(--green-300)
+      &--error:hover
+        border-color: var(--red-300)
+      &--locked:hover
+        border-color: var(--purple-300)
+      &--incomplete:hover
+        border-color: var(--gray-450)
+        &.side-nav__button--active
+          border-color: var(--blue-300)
+
+  &__button
+    @include body-m-bold
+    @include color-transitions
+    position: relative
+    right: 1.5px
+    margin-top: 16px
+    padding-left: 24px
+    background: transparent
+    border: none
+    border-left: 2px solid transparent
+    color: var(--gray-450)
+    text-align: left
+    &:active,
+    &:hover,
+    &:focus
+      outline: none
+    &:first-of-type
+      margin-top: 0
+    &:last-of-type
+      padding-bottom: 0
+    &:hover
+      border-color: var(--gray-700)
+    &--is-read-only
+      pointer-events: none
+    &--complete
+      color: var(--green-300)
+      &.side-nav__button--active
+        border-color: var(--green-300)
+    &--error
+      color: var(--red-300)
+      &.side-nav__button--active
+        border-color: var(--red-300)
+    &--incomplete
+      &:hover
+        color: var(--gray-700)
+      &.side-nav__button--active
+        border-color: var(--blue-300)
+        color: var(--blue-300)
+        &:hover
+          color: var(--blue-300)
+    &--locked
+      color: var(--purple-300)
+      &.side-nav__button--active
+        border-color: var(--purple-300)
+    &__icon
+      margin-left: 0.5rem
+
+

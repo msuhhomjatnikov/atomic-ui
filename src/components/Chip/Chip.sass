@@ -1,0 +1,65 @@
+@import "../../abstracts/Typography/Typography.sass"
+@import "../../abstracts/Transition/Transition.sass"
+
+.chip
+  @include body-m
+  border-radius: 100px
+  border: 1px solid transparent
+  background-color: var(--gray-120)
+  color: var(--black)
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 0 12px
+  height: 44px
+
+  &--input
+    max-width: fit-content
+    background-color: var(--white)
+    border-color: var(--gray-150)
+
+  &--active
+    border-color: var(--gray-120)
+    background-color: var(--white)
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08)
+    @include color-transitions
+    
+    &:hover
+      box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1)
+    .chip__label
+      padding: 0 4px
+
+  &:active,
+  &:focus
+    outline: none
+
+  &:focus
+    border: 2px solid var(--orange-300)
+
+  &__error
+    @include body-s
+    display: block
+    color: var(--red-300)
+    padding-top: 4px
+
+  &__clear
+    border: none
+    background: none
+    padding: 0
+    margin-right: 8px
+    cursor: pointer
+
+  &__label
+    padding: 0 16px
+
+  input
+    background-color: var(--white)
+    border: none
+    box-shadow: none
+    min-width: 72px
+    margin: 0 8px
+    outline: none
+    &:focus,
+    &:hover
+      border: none
+      box-shadow: none

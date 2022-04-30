@@ -1,0 +1,132 @@
+@import "../../abstracts/Transition/Transition.sass"
+  
+$container-border-radius: 6px
+$container-width: 36px
+$container-height: 20px
+$indicator-border-radius: 4px
+$indicator-size: 14px
+
+.toogle-switch-container
+  display: flex
+  height: 20px
+
+  .switch-label
+    cursor: pointer
+    padding-left: 50px
+
+    &.-highlight-checked
+      color: var(--orange-550)
+
+  .toggle-switch
+    display: inline-block
+    position: relative
+
+  .toggle-switch-check
+    height: $container-height
+    width: $container-width
+    position: absolute
+    opacity: 0
+    z-index: 2
+    cursor: pointer
+
+    ~ .toggle-switch-bar
+      display: inline-flex
+      height: 20px
+      position: relative
+      user-select: none
+
+      &:before
+        background-color: var(--gray-150)
+        border: solid 1px var(--gray-150)
+        border-radius: $container-border-radius
+        bottom: 0
+        left: 0
+        top: 0
+        content: ' '
+        display: block
+        position: absolute
+        transition: background-color $transition-duration, border-color $transition-duration, color $transition-duration, left $transition-duration, right $transition-duration
+        width: $container-width
+
+      &:after
+        background-color: var(--white)
+        border: solid 1px var(--white)
+        border-radius: $indicator-border-radius
+        content: ''
+        display: block
+        top: 3px
+        left: 3px
+        position: absolute
+        transition: background-color $transition-duration, border-color $transition-duration, color $transition-duration, left $transition-duration, right $transition-duration
+        height: $indicator-size
+        width: $indicator-size
+
+      .toggle-switch-icon
+        top: -1px
+        position: absolute
+        transition: background-color $transition-duration, border-color $transition-duration, color $transition-duration, left $transition-duration, right $transition-duration
+        z-index: 1
+
+      .toggle-switch-icon-on
+        left: 9px
+        opacity: 0
+
+      .toggle-switch-icon-off
+        left: 22px
+
+    &:checked ~ .toggle-switch-bar:after
+      background-color: var(--white)
+      border: solid 1px var(--white)
+      border-radius: $indicator-border-radius
+      left: 19px
+
+    &:checked ~ .toggle-switch-bar:before
+      background-color: var(--orange-550)
+      border: solid 1px var(--orange-550)
+      border-radius: $container-border-radius
+
+    &:hover:checked ~ .toggle-switch-bar:before
+      background-color: var(--orange-700)
+      border: solid 1px var(--orange-700)
+
+    &:focus:checked ~ .toggle-switch-bar:before
+      background-color: var(--orange-700)
+      border: solid 2px var(--orange-700)
+      box-shadow: 0px 0px 0px 2px var(--orange-120)
+
+    &:hover:not(:checked) ~ .toggle-switch-bar:before
+      background-color: var(--gray-150)
+      border: solid 1px var(--gray-150)
+
+    &:focus:not(:checked) ~ .toggle-switch-bar:before
+      background-color: var(--gray-150)
+      border: solid 2px var(--gray-150)
+      box-shadow: 0px 0px 0px 2px var(--gray-120)
+
+    &:checked ~ .toggle-switch-bar .toggle-switch-icon-on
+      opacity: 1
+
+    &:checked ~ .toggle-switch-bar .toggle-switch-icon-off
+      opacity: 0
+
+.toogle-switch-container.disabled
+
+  .toggle-switch-check
+    ~ .toggle-switch-bar:before,
+    &:hover ~ .toggle-switch-bar:before,
+    &:focus ~ .toggle-switch-bar:before
+      background-color: var(--orange-120)
+      border: solid 1px var(--orange-120)
+
+    &:not(:checked) ~ .toggle-switch-bar:before,
+    &:not(:checked):hover ~ .toggle-switch-bar:before,
+    &:not(:checked):focus ~ .toggle-switch-bar:before
+      background-color: var(--gray-150)
+      border: solid 1px var(--gray-150)
+
+    ~ .toggle-switch-bar:after
+      background-color: var(--gray-120)
+      border: solid 1px var(--gray-120)
+
+  .switch-label
+    color: var(--gray-300)

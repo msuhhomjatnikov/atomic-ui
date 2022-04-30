@@ -1,0 +1,82 @@
+$width-md: 20px
+$width-sm: 16px
+$height-md: 20px
+$height-sm: 16px
+$box-shadow: 0px 0px 0px 3px var(--orange-120)
+
+.radio-btn
+  position: relative
+  display: flex
+  align-items: center
+
+  &--md
+    .radio-btn
+      &__input,
+      &__control
+        width: $width-md
+        height: $height-md
+
+  &--sm
+    .radio-btn
+      &__input,
+      &__control
+        width: $width-sm
+        height: $height-sm
+
+      &__input
+        &:checked
+          + .radio-btn__control
+            border-width: 5px
+
+  &__input
+    opacity: 0
+    z-index: 1
+
+    &:hover
+      cursor: pointer
+
+    &:focus,
+    &:active
+      + .radio-btn__control
+        -webkit-box-shadow: $box-shadow
+        box-shadow: $box-shadow
+
+    &:not(:checked)
+      &:disabled,
+      &:hover
+        + .radio-btn__control
+          background: var(--gray-120)
+
+    &:checked
+      + .radio-btn__control
+        border-width: 6px
+        border-color: var(--orange-450)
+
+      &:hover,
+      &:focus
+        + .radio-btn__control
+          border-color: var(--orange-700)
+
+    &:disabled
+      pointer-events: none
+
+      &:checked
+        + .radio-btn__control
+          border-color: var(--gray-150)
+          background: var(--gray-300)
+
+  &__control
+    position: absolute
+    left: 0
+    content: ''
+    display: inline-block
+    border-radius: 50%
+    border-style: solid
+    border-width: 1px
+    border-color: var(--orange-150)
+    background: var(--white)
+
+  &__label
+    pointer-events: none
+    margin-bottom: 0
+    margin-left: 5px

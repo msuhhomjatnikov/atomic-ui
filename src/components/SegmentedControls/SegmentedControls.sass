@@ -1,0 +1,87 @@
+@import "../../abstracts/Typography/Typography.sass"
+@import "../../abstracts/Transition/Transition.sass"
+
+.sgm-control
+  @include body-m
+  background: var(--gray-120)
+  display: flex
+  justify-content: space-evenly
+  width: 100%
+  border-radius: 8px
+  font-feature-settings: 'tnum' on, 'lnum' on
+  padding: 2px
+
+  &--error
+    outline: 1px solid var(--red-300)
+
+  &--grid
+    display: grid
+    grid-auto-columns: 100%
+    height: auto
+    .sgm-control__button
+      @include color-transitions
+
+      &::before
+        display: none
+
+  &--has-active-option
+    .sgm-control__button--inactive
+      color: var(--gray-300)
+
+  &__button
+    height: 48px
+    margin: 2px
+    border: 0
+    border-radius: 6px
+    min-width: 0
+    background: transparent
+    flex: 1
+    position: relative
+    @include color-transitions
+
+    &:not(:first-child)::before
+      content: ''
+      position: absolute
+      left: -2px
+      top: 11px
+      bottom: 11px
+      width: 1px
+      background-color: var(--gray-150)
+
+    &--inactive
+      &:hover,
+      &:focus
+        color: var(--black)
+
+    &--active
+      background: var(--white)
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+
+    // Hide separator to the left and right
+    // of active or focused button
+    &--active,
+    &--active + &--inactive,
+    &:focus,
+    &:focus + &--inactive
+      &::before
+        display: none
+
+    &__label
+      display: block
+      margin: 0 auto
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+
+    &:focus,
+    &:active
+      outline: 2px solid var(--orange-300)
+
+  &__label
+    @include body-l
+    display: block
+    color: var(--gray-300)
+    margin-bottom: 8px
+
+  & ~ .invalid_feedback
+    display: block
