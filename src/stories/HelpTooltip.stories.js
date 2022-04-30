@@ -1,9 +1,14 @@
 import React from 'react';
-import HelpTooltip from '../components/HelpTooltip';
+import HelpTooltip from '../components/HelpTooltip/HelpTooltip';
 import Slack from './story-assets/slack-icon-demo.svg';
 
 export default {
     title: 'Atoms/HelpTooltip',
+    argTypes: {
+        content: { control: 'text' },
+        iconSrc: { control: 'text' },
+        iconClassName: { control: 'text' },
+    },
     decorators: [],
 };
 

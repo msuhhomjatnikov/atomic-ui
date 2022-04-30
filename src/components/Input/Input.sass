@@ -1,0 +1,45 @@
+@import "../../abstracts/Typography/Typography.sass"
+
+.form-group
+  .input-label-container
+    label
+      display: inline-flex
+      align-items: center
+      color: var(--gray-300)
+      @include body-m-bold
+
+      .input-help-tooltip-icon
+        margin-left: 4px
+
+      .optional-tag
+        margin-left: 4px
+        color: var(--gray-300)
+        cursor: default
+        @include body-s
+
+  .currency-input-wrapper ~ .invalid-feedback
+    display: block
+
+  .floating-placeholder
+    pointer-events: none
+
+.form-control
+  width: 100%
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.01em
+  background-color: var(--white)
+  color: var(--gray-450)
+  border: 1px solid #DCDBDA
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 2%)
+  padding-left: 16px
+  border-radius: 8px
+  height: 40px
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out
+  &:focus
+    outline: none
+
+.input-help
+  @include body-s
+  color: var(--gray-300)
