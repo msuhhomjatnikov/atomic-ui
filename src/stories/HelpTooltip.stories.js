@@ -1,5 +1,5 @@
 import React from 'react';
-import HelpTooltip from '../components/HelpTooltip/HelpTooltip';
+import HelpTooltip from '../components/HelpTooltip';
 import Slack from './story-assets/slack-icon-demo.svg';
 
 export default {

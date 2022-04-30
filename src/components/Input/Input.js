@@ -1,5 +1,5 @@
 import React, { forwardRef, memo, useCallback } from 'react';
-import { any, string, func, bool } from 'prop-types';
+import { string, func, bool } from 'prop-types';
 import HelpTooltip from '../HelpTooltip';
 
 import './Input.sass';
