@@ -1,0 +1,63 @@
+@import "../../../abstracts/Typography/Typography.sass"
+@import "../../../abstracts/Transition/Transition.sass"
+
+.full-screen-modal
+
+  &-container
+    position: absolute
+    top: 0
+    left: 0
+    min-height: 100%
+    width: 100%
+    z-index: 1001
+    background-color: #FFFFFF
+    visibility: hidden
+    opacity: 0
+    transition: opacity $transition-duration, visibility $transition-duration
+
+  &-container.visible
+    opacity: 1
+    visibility: visible
+
+  &-divider
+    height: 1px
+    background-color: var(--gray-150)
+
+  &-children
+    max-width: 1264px
+    padding: 32px 24px
+    margin: 0 auto
+
+    &-content
+      max-width: 480px
+      margin: 0 auto
+
+      .text-header
+        color: var(--black)
+
+      .text-description
+        @include body-m
+        color: var(--black)
+        margin-bottom: 16px
+
+  &-top-bar
+    height: 72px
+    padding: 16px 24px
+    max-width: 1264px
+    margin: 0 auto
+    display: flex
+
+    .icon
+      color: var(--gray-300)
+
+    .button-container
+      padding: 8px
+      height: 40px
+      width: 40px
+
+      &.-align-right
+        margin-left: auto
+
+  &-buttons-container
+    display: flex
+    padding-top: 24px

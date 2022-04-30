@@ -1,0 +1,74 @@
+@import "../../abstracts/Typography/Typography.sass"
+
+@mixin paintIcons($iconColor)
+  .user-custom-icon,
+  .check-circle,
+  .x-circle,
+  .clock
+    circle
+      fill: $iconColor
+
+  .bolt
+    path
+      fill: $iconColor
+
+.status-badge
+  display: inline-flex
+  align-items: center
+  height: 22px
+  border-radius: 3px
+  padding: 5px 6px
+  white-space: nowrap
+
+  &.-text-only
+    .badge-label
+      margin-left: 0
+
+  .badge-label
+    margin-left: 6px
+    @include body-s
+
+  &.-green
+    color: var(--green-450)
+    background-color: var(--green-120)
+    @include paintIcons(var(--green-300))
+
+  &.-red
+    color: var(--red-450)
+    background-color: var(--red-120)
+    @include paintIcons(var(--red-300))
+
+  &.-blue
+    color: var(--blue-450)
+    background-color: var(--blue-120)
+    @include paintIcons(var(--blue-300))
+
+  &.-yellow
+    color: var(--yellow-450)
+    background-color: var(--yellow-120)
+    @include paintIcons(var(--yellow-300))
+
+  &.-orange
+    color: var(--orange-450)
+    background-color: var(--orange-120)
+    @include paintIcons(var(--orange-300))
+
+  &.-pink
+    color: var(--pink-450)
+    background-color: var(--pink-120)
+    @include paintIcons(var(--pink-300))
+
+  &.-purple
+    color: var(--purple-450)
+    background-color: var(--purple-120)
+    @include paintIcons(var(--purple-300))
+
+  &.-gray
+    color: var(--gray-450)
+    background-color: var(--gray-120)
+    @include paintIcons(var(--gray-300))
+
+  &.-ui-moss
+    color: var(--ui-moss-450)
+    background-color: var(--ui-moss-120)
+    @include paintIcons(var(--ui-moss-300))

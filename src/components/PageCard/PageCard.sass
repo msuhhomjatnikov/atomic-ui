@@ -1,0 +1,71 @@
+.page-header
+  margin-left: 24px
+
+.page-card
+  background-color: var(--page-card-bg-color)
+  padding: 24px 0
+  border-radius: 8px
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1)
+  flex: 1
+  width: 100%
+
+  &.-narrow-bottom
+    padding-bottom: 8px
+
+  &.-narrow-bottom-top
+    padding-bottom: 15px
+    padding-top: 15px
+
+  &.-stacked
+    & + &
+      margin-top: 20px
+
+  &.-interactive
+    cursor: pointer
+
+    &:hover
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1)
+
+  &_header
+    padding: 0 24px
+
+    &.-no-identation
+      padding-left: 0
+
+  &_container
+    padding: 0 24px
+
+  & + &
+    margin-top: 32px
+
+  &_item
+    display: flex
+    align-items: flex-start
+    padding: 14px 0
+
+    &:last-child
+      padding-bottom: 0
+
+    & + &
+      border-top: 1px solid var(--page-card-item-border-color)
+
+    &_label
+      flex: 3
+      width: 30%
+      line-height: normal
+      font-size: 14px
+      font-weight: medium
+      color: var(--page-card-item-label-color)
+      padding-right: 24px
+
+    &_value
+      flex: 5
+      &.-multiline
+        white-space: pre
+
+      &.align-right
+        text-align: right
+
+      &.align-left
+        text-align: left
+
