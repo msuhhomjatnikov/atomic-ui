@@ -15,7 +15,7 @@ $indicator-size: 14px
     padding-left: 50px
 
     &.-highlight-checked
-      color: var(--orange-550)
+      color: var(--blue-550)
 
   .toggle-switch
     display: inline-block
@@ -54,7 +54,7 @@ $indicator-size: 14px
         border-radius: $indicator-border-radius
         content: ''
         display: block
-        top: 3px
+        top: 2px
         left: 3px
         position: absolute
         transition: background-color $transition-duration, border-color $transition-duration, color $transition-duration, left $transition-duration, right $transition-duration
@@ -79,20 +79,21 @@ $indicator-size: 14px
       border: solid 1px var(--white)
       border-radius: $indicator-border-radius
       left: 19px
+      top: 2px
 
     &:checked ~ .toggle-switch-bar:before
-      background-color: var(--orange-550)
-      border: solid 1px var(--orange-550)
+      background-color: var(--blue-550)
+      border: solid 1px var(--blue-550)
       border-radius: $container-border-radius
 
     &:hover:checked ~ .toggle-switch-bar:before
-      background-color: var(--orange-700)
-      border: solid 1px var(--orange-700)
+      background-color: var(--blue-700)
+      border: solid 1px var(--blue-700)
 
     &:focus:checked ~ .toggle-switch-bar:before
-      background-color: var(--orange-700)
-      border: solid 2px var(--orange-700)
-      box-shadow: 0px 0px 0px 2px var(--orange-120)
+      background-color: var(--blue-700)
+      border: solid 2px var(--blue-700)
+      box-shadow: 0px 0px 0px 2px var(--blue-120)
 
     &:hover:not(:checked) ~ .toggle-switch-bar:before
       background-color: var(--gray-150)
@@ -115,8 +116,8 @@ $indicator-size: 14px
     ~ .toggle-switch-bar:before,
     &:hover ~ .toggle-switch-bar:before,
     &:focus ~ .toggle-switch-bar:before
-      background-color: var(--orange-120)
-      border: solid 1px var(--orange-120)
+      background-color: var(--blue-120)
+      border: solid 1px var(--blue-120)
 
     &:not(:checked) ~ .toggle-switch-bar:before,
     &:not(:checked):hover ~ .toggle-switch-bar:before,
