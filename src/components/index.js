@@ -12,7 +12,7 @@ export {
     BUTTON_TYPE,
 } from './Button';
 export { default as Switch } from './Switch';
-export { ActionToast } from './ActionToast';
+export { default as ActionToast } from './ActionToast';
 export {
     default as StatusBadge,
     STATUS_BADGE_COLOR,

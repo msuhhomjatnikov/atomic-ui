@@ -5,7 +5,13 @@ const pkg = require('./package.json');
 
 module.exports = {
     entry: './src/index.js',
-    externals: [nodeExternals()],
+    externals: [
+        nodeExternals(),
+        {
+            react: "react",
+            'react-dom': "react-dom"
+        }
+    ],
     output: {
         filename: 'Main.js',
         path: path.resolve(__dirname, 'dist'),
@@ -39,3 +45,13 @@ module.exports = {
         }
     },
 };
+
+exports.module = [
+    {
+        // ...
+        externals: {
+            react: "react",
+            'react-dom': "react-dom"
+        },
+    }
+]
