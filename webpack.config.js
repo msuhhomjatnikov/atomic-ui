@@ -10,7 +10,7 @@ module.exports = {
         filename: 'Main.js',
         path: path.resolve(__dirname, 'dist'),
         library: pkg.name,
-        libraryTarget: 'umd',
+        libraryTarget: 'commonjs2',
     },
     target: 'web',
     plugins: [new CleanWebpackPlugin()],
@@ -34,5 +34,8 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+        alias: {
+            react: path.resolve('./node_modules/react')
+        }
     },
 };
