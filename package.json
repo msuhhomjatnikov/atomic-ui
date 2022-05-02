@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/msuhhomjatnikov"
   },
-  "version": "0.3.0",
+  "version": "0.4.0",
   "homepage": "http://msuhhomjatnikov.github.io/atomic-ui",
   "dependencies": {
     "@babel/cli": "^7.17.10",
@@ -100,8 +100,8 @@
       "last 1 safari version"
     ]
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/Main.js",
+  "module": "dist/Main.js",
   "files": [
     "dist"
   ],
